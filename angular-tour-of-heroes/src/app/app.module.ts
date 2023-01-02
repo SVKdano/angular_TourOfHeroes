@@ -14,6 +14,7 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -33,8 +34,9 @@ import { InMemoryDataService } from './services/in-memory-data.service';
         // and returns simulated server responses.
         // Remove it when a real server is ready to receive requests.
         HttpClientInMemoryWebApiModule.forRoot(
-          InMemoryDataService, { dataEncapsulation: false }
-        )
+            InMemoryDataService, {dataEncapsulation: false}
+        ),
+        MatSlideToggleModule
     ],
   providers: [],
   bootstrap: [AppComponent]
